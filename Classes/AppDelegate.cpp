@@ -30,7 +30,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto screenSize = glview->getFrameSize();
     std::vector<std::string> resDirOrders;
     
-    if (2048 == screenSize.width || 2048 == screenSize.width)
+    if (2048 == screenSize.width || 2048 == screenSize.height)
     {
         resDirOrders.push_back("ipadhd");
         resDirOrders.push_back("ipad");
@@ -40,7 +40,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         
         glview->setDesignResolutionSize(2048, 1536, ResolutionPolicy::NO_BORDER);
     }
-    else if (1024 == screenSize.width || 1024 == screenSize.width)
+    else if (1024 == screenSize.width || 1024 == screenSize.height)
     {
         resDirOrders.push_back("ipad");
         resDirOrders.push_back("iphonehd5");
@@ -49,7 +49,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         
         glview->setDesignResolutionSize(1024, 768, ResolutionPolicy::NO_BORDER);
     }
-    else if (1136 == screenSize.width || 1136 == screenSize.width)
+    else if (1136 == screenSize.width || 1136 == screenSize.height)
     {
         resDirOrders.push_back("iphonehd5");
         resDirOrders.push_back("iphonehd");
@@ -57,7 +57,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         
         glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::NO_BORDER);
     }
-    else if (960 == screenSize.width || 960 == screenSize.width)
+    else if (960 == screenSize.width || 960 == screenSize.height)
     {
         resDirOrders.push_back("iphonehd");
         resDirOrders.push_back("iphone");
